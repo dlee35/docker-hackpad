@@ -2,7 +2,7 @@
 
 export SCALA_HOME="/usr/share/scala"
 export SCALA="/usr/bin/scala"
-export SCALA_LIBRARY_JAR="/usr/share/scala/lib/scala-library.jar"
+export SCALA_LIBRARY_JAR="/usr/share/java/scala-library.jar"
 
 export JAVA_HOME="/usr/share/java"
 export JAVA="/usr/bin/java"
