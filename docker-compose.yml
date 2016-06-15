@@ -1,13 +1,20 @@
-hackpad:
-  image: istepanov/hackpad
-  ports:
-   - "9000:9000"
-  links:
-   - mysql
-mysql:
-  image: mysql
-  environment:
-    MYSQL_ROOT_PASSWORD: root_password
-    MYSQL_USER: hackpad
-    MYSQL_PASSWORD: password
-    MYSQL_DATABASE: hackpad
+  mysql:
+    restart: always
+    image: mysql/mysql-server
+    container_name: mysql
+    environment:
+      - MYSQL_USER=hackpad
+      - MYSQL_PASSWORD=password
+      - MYSQL_RANDOM_ROOT_PASSWORD=yes
+      - MYSQL_DATABASE=hackpad
+    volumes:
+      - /srv/docker/hackpad/mysql:/var/lib/mysql
+  
+  hackpad:
+    restart: always
+    image: dlee35/docker-hackpad
+    container_name: hackpad
+    links:
+      - mysql:mysql
+    ports:
+      - "9000:9000"
