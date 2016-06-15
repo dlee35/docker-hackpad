@@ -1,8 +1,10 @@
-# istepanov/hackpad
+# dlee35/docker-hackpad
 
-[Hackpad](https://github.com/dropbox/hackpad) Docker image
+Original Repo [Hackpad](https://github.com/dropbox/hackpad)
 
-Docker Hub [link](https://hub.docker.com/r/istepanov/hackpad/)
+Original Docker [link](https://github.com/istepanov/docker-hackpad)
+
+Docker Hub [link](https://hub.docker.com/r/dlee35/docker-hackpad/)
 
 ### Environment variables
 
